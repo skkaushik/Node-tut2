@@ -5,20 +5,17 @@ const app=express();
 
 const publicPath=path.join(__dirname,'public');
 // app.use(express.static(publicPath));
+// console.log(__dirname+`/public/index.html`);
 app.get('',(req,resp)=>{
-    resp.sendFile(`
-    ${publicPath}/index.html
-    `)
+    resp.sendFile(`${publicPath}/index.html`);
 })
 app.get('/about',(req,resp)=>{
-    resp.sendFile(`
-    ${publicPath}/about.html
-    `)
+    resp.sendFile(`${publicPath}/about.html`)
 })
 app.get('/contact',(req,resp)=>{
-    resp.sendFile(` ${publicPath}/contact.html `)
+    resp.sendFile(`${publicPath}/contact.html`)
 })
 
 
 
-app.listen(5000);
+app.listen(4200);
