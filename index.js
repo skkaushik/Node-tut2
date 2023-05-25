@@ -1,7 +1,7 @@
-console.log("Hi!, This is first student");
+let a=20;
+let b=0;
 
- setTimeout(()=>{
-    console.log("Hi!, This is second student");
- },2000);
-
- console.log("Hi!, This is third student");
+setTimeout(()=>{
+    b=30;
+},2000);
+console.log(a+b);
