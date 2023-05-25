@@ -2,17 +2,43 @@ const express=require('express');
 const app=express();
 
 app.get('',(req,resp)=>{
-    let getData=req.query.name;
-    resp.send('Welcome '+getData+' ,  This is Home  page and Welcome  ');
+    
+    resp.send('Welcome  ,  This is Home  page and Welcome  ');
 });
 
 app.get('/about',(req,resp)=>{
     
-    resp.send('Welcome  ,  This is About  page and Welcome  ');
+    resp.send(`
+    <h1>About Us</h1>
+    <p>Hello! This is sachin kaushik ,who is learning the nodejs and express Today is going to learn how to write html and json in node js.</p>
+    <button>Lode More</button>
+
+    
+    `);
 });
 app.get('/contact',(req,resp)=>{
     
-    resp.send('Welcome ,  This is Contact  page and Welcome  ');
+    resp.send(`
+    <h1> Contact Us</h1>
+    <input type='text' placeholder='Enter your name'><br><br>
+    <input type-'email' placeholder='Enter your Email'><br><br>
+    <textarea placeholder='Type your message'></textarea><br><br>
+    <button> Submit</button>
+    `);
+});
+
+app.get('/json',(req,resp)=>{
+    
+    resp.send(
+        {
+        name:'Sachin Kaushik',
+        Email:'Skkahjkhj@gmaail.com',
+        phoneno:768665656,
+        }
+   
+
+    
+    );
 });
 
 app.listen(5000);
