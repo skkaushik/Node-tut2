@@ -1,15 +1,7 @@
-const fs=require('fs');
-const input=process.argv;
+console.log("Hi!, This is first student");
 
-if(input [2]=='add'){
-    fs.writeFileSync(input[3],input[4]);
+ setTimeout(()=>{
+    console.log("Hi!, This is second student");
+ },2000);
 
-}
-
-else if(input[2]=='remove'){
-    fs.unlinkSync(input[3]);
-}
-
-else {
-    console.log("Pls Enter Valid Input")
-}
+ console.log("Hi!, This is third student");
