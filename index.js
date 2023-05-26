@@ -24,7 +24,12 @@ app.get('/profile',(req,resp)=>{
         Skills:['Java','Python','C++','Nodejs']
     }
     resp.render('profile',{user});
-})
+});
+
+app.get('/login',(req,resp)=>{
+    
+    resp.render('login');
+});
 
 
 
