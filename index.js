@@ -20,7 +20,8 @@ app.get('/profile',(req,resp)=>{
     const user={
         name:'Sachin Kaushik',
         Email:'skkaushik63728gmail.com',
-        Address:'Agra'
+        Address:'Agra',
+        Skills:['Java','Python','C++','Nodejs']
     }
     resp.render('profile',{user});
 })
